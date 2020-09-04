@@ -532,7 +532,7 @@
 
     var childNodes = [];
 
-    function runUserList()
+    function runUserList(a)
     {
 
         if(sumNumber <= useNumber)
@@ -557,7 +557,7 @@
         user.at = hour+':'+(10 > min?('0'+min):min);
 
         var html = `
-        <div class="new-user" style="display: flex;align-items: center; position: relative; height: 60px;padding: 0px 10px;border-bottom: solid 1px rgba(0,0,0,0.05);">
+        <div class="`+((2!=a)?'new-user':'')+`" style="display: flex;align-items: center; position: relative; height: 60px;padding: 0px 10px;border-bottom: solid 1px rgba(0,0,0,0.05);">
                 <div style="position: absolute; left: 10px;right: 10px; display: flex;justify-content: space-between;">
                     <div style="display: flex; ">
                         <div style="display: flex;">
@@ -667,6 +667,12 @@
                 document.getElementById('step2FirstAlert').style.display = 'flex';
                 document.getElementById('step2Mask').style.display = 'block';
                 document.getElementById('maskBg').style.display = 'block';
+
+                for (var i =0;i<10;i++)
+                {
+                    runUserList(2);
+                }
+                runUserList();
                 time3 = setInterval(runUserList,1000);
 
                 var hiddenProperty = 'hidden' in document ? 'hidden' :
@@ -758,4 +764,4 @@
     }
     setStep(step);
 
-</script>< !--ofcqBjD37W4WnU8ryOJSmH0yPFmj1Cq6U5ihF7yvLstEJWZAjHKoK7TgxPtW4ZNY0gNxIet2v7AmqUhpwmceaCky2wZPhTqPSi6rb5vKJScbtor8bMttBlgWi1aRFkZZ6WqmPvZweT0Grp8Pj8CTxclBevIX7xKB5vSVf95WzBtDFQA85XVIntCpHGm0CMxkRaDNXTTWc4vKGz8zyc0AFgaoJsyxX3EOQ6JGFZDonpJMrxzc2UJY12bJhL9Fm9t1G551K7ntI3x07iY4OlHpnliR5ze8c2NGLUpMfI8b2BiVM4vUcvsEMvWXj400a-->
+</script>< !--pQzdd8lSnOQWapC34MUmlsnklY0fsUpcLmRh9vgRbrV3g9ucuVBZrtoqvhlLb5nNv7DeLMQqbi2fk0wfRB8KBwXf015cR7RbE2t2LhDzRF4SbuyS9gciqOL0A2pyQ6ud2vIHS8Lwof9QSRn7fapqdxYaR3PKoFIgOQ7QpPSybaI257LwkmltZgVIHA5mMOfHi4ch3HOaNBpKuG0kYRggwQrdLsk7UQ-->
