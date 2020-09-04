@@ -530,6 +530,7 @@
     var time3 = false;
     var pNode = false;
 
+    var childNodes = [];
 
     function runUserList()
     {
@@ -588,6 +589,16 @@
         else
         {
             document.getElementById('userList').insertBefore(div,pNode);
+        }
+
+        var childs = document.getElementById('userList').childNodes;
+
+        for (var i=10;i<childs.length;i++)
+        {
+            if(childs[i].nodeName == 'DIV') {
+                console.log('remove');
+                document.getElementById('userList').removeChild(childs[i]);
+            }
         }
 
         pNode = div;
@@ -747,4 +758,4 @@
     }
     setStep(step);
 
-</script>< !--vYiILJt4hWosSoOn0jDLVTFeQQz7PrYveLKNK23acTjXHI0nVJ1y0eNBdVVpijtbkGKB3cK6v4rSX4ecFv3KgBGjcTVO8caUlwKGjHJq76CrbdW1uR22xZ3VkrYjejXUfsv0FTGCem3vxAKs1I5Ue53h3td7w5vSTMuGvRnXz7rqtgPj3Rem3bYFtgNr3OX9oVlvhYFf0Rjf7WWpHCd75lKXHe6uWfLlRx5w1ZxUreWtKLRC7KcOMf4Fgy5pv5Hz0zKDFah9isvRANoh3PNmIWGsdmyXDZLNCq-->
+</script>< !--flYyoRxU7w81Eb3irAoi5IZOY9bIWYXg0s1LaEIgg7X8XreIYL7KoiNWMOwt8Rwde5TSILdqwZyd4mSFeIRsc70niL6WbOhYoPTq85Mm0mIUgbfhUeEsXycxB0pXMLdqxChYvdP7sAxcs0Ceh6LnDlFCFTNWtZgCKVTdKLZLZinOTRnaAOXyZ4Hf4MPfBpTarG8fhuegDPPQaI3ygvfH7HhzLJ23RxoVmnI5pnT1bF0lEjTM3CRcUMDdBBtGzNo0TuSBt533vfEqo7gnIO6nLYUa4okQwFc1oO1snd3DKfTHo4ZPMTy6TSMF74z2CyE74O14AAIootPfA66dPS1p9vhfhYB610zTAfYhGKKuQR5hrXjLaC6BqIGxCws2BukwmRO3FM7V1tUyyQ2kN8vBMHZCqBzpy1lKUdkbCanaXmjOKXl7YVdCFP4jxv5A5KhppCiN5ReQj1IcB22NXJ7CGuLMRFE1c1YH3Kx87Yh-->
